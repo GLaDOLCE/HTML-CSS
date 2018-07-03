@@ -3,46 +3,57 @@
 <head>
     <meta charset="utf-8">
         <title>
-            html test
+            練習用
         </title>
+        <link type="text/css" rel="stylesheet" href="練習1.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body
+            {
+                background: #F2F2F2;
+            }
+        </style>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 
 <body>
-    <p align="left">
-        <font color=black size=6>
-            HTML123456
-        </font>
-    </p>
-    <hr size="10" align="center" color="BLACK">
-        <font color=BLACK  size=6>
-            <ol>
-                <li><b>測試1</b>
-                <li><i>測試2</i>
-                <li><u>測試3</u>
-            </ol>
-        </font>
-    <article>
-        <font color=BLACK  size=7>
-            <h1>標題</h1>
-            <p>副標題測試123123</p>
-        <section>
-            <section id="副標題">
-                <h1>範例內容</h1>
-        </section>
-        </font>
-        <a href="https://www.youtube.com/?gl=TW">點我去youtube</a>
-    </article>
-        
-    <font color=BLACK  size=7>
-        <ul>
-            <li><abbr title="Title">TT</abbr>       
-            <li>標題2
-            <li>標題3
-        </ul>
-    </font>
-    <footer>
-        <a href="https://www.google.com.tw/">點我去google</a>
-    </footer>
+
+    <header id=header>
+        <div class=container>
+            <div class=logo>Shoptime</div>
+            <div class=menu>
+                <a href="" class="active">HOME</a>
+                <a href="">ORDERS</a>
+                <a href="">PRODUCT</a>
+            </div>
+            <div class=admin>ADMIN</div> 
+        </div>
+    </header>
+    <div id="curve_chart" style="width: 900px; height: 500px"></div>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales', 'Expenses'],
+          ['2004',  1000,      400],
+          ['2005',  1170,      460],
+          ['2006',  660,       1120],
+          ['2007',  1030,      540]
+        ]);
+
+        var options = {
+          title: 'Company Performance',
+          
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
 </body>
 
 </html>
