@@ -41,37 +41,32 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }                                           /*css reset樣式*/
-
+body{
+	font-family:Microsoft JhengHei;
+}
 .wrap{
-    width: 1024px;
+	width: 1024px;
 	margin: auto;
 }
 a{
 	text-decoration: none;
 }
-.header{
-	background: white;
-	float: left;
-	width: 1002px;
-	height: 70px;
-}
 .toplist{
-	margin-top: 304px;
+	margin-top: 80px;
 	width: 1002px;
 }
 .toplist ul{
-	background: #f6f6f6;
 	float: right;
 }
 .toplist li{
 	float: left;
 	padding: 7px;
 }
-.fb{
+.fblink{
 	color: #4460a0;
 	margin-left: 832px;
 }
-.twitter{
+.twitterlink{
 	color: #00aaec; 
 }
 .toplist a{
@@ -79,13 +74,18 @@ a{
 	opacity:1;
 }
 .toplist a:hover{
+	transition: all 0.4s;
 	opacity:0.6;
 }
-
-h1{
+.header{
+	display: inline-block;
+	background: white;
+	height: 70px;
+}
+.header h1{
 	float: left;
 }
-h1 a{
+.header h1 a{
 	background-image: url("../img/logo.png");
 	background-repeat: no-repeat;
 	width: 170px;
@@ -98,6 +98,7 @@ h1 a{
 	opacity:1;
 }
 h1 a:hover{
+	transition: all 0.5s;
 	opacity:0.6;
 }
 .aboutus{
@@ -115,12 +116,22 @@ h1 a:hover{
 	display: block;
 	color: #00cc99;
 }
-.aboutus1.active,.aboutus2.active,.aboutus3.active{
-	border-bottom: 3px #00cc99 solid;
+.home1,.home2,.home3{
+	position: relative;
+	overflow: hidden;
 }
-.aboutus a:hover{
+.border{
+	overflow: hidden;
+	position: absolute;
+	width: 114px;
+	background: #00cc99;
+	height: 5px;
+	bottom: -5px;
 	transition: all 0.5s;
-	border-bottom: 3px #00cc99 solid;
+}
+.home1:hover .border,.home2:hover .border,.home3:hover .border,
+.home1.active .border,.home2.active .border,.home3.active .border{
+	bottom: 0px;
 }
 .scroll1,.scroll2,.scroll3{
 	display: none;
@@ -128,6 +139,11 @@ h1 a:hover{
 .scroll1 li,.scroll2 li,.scroll3 li{
 	float: none;
 	background: white;
+}
+.scroll1 a:hover,.scroll2 a:hover,.scroll3 a:hover{
+	transition: all 0.5s;
+	background: #00cc99;
+	color: white;
 }
 .banner{
 	z-index: -1;
@@ -138,7 +154,6 @@ h1 a:hover{
 }
 
 .inbanner{
-	font-family:Microsoft JhengHei;
 	padding: 30px 590px 30px 16px;
 	background:rgba(0,0,0,0.15);
 	line-height: 48px;
@@ -151,7 +166,7 @@ h1 a:hover{
 }
 .introduction{
 	width: 1006px;
-	margin: 53px auto 0px auto;
+	margin: 400px auto 0px auto;
 }
 .introduction li{
 	float: left;
@@ -202,14 +217,14 @@ h1 a:hover{
 	font-size: 34px;
 	font-family: Microsoft JhengHei;
 }
-tr,td,th{
+.different tr,.different td,.different th{
 	text-align: left;
 	border-bottom: 1px solid #dddddd;
 	border-top: 1px solid #dddddd;
 	padding: 15px 113px 15px 30px;
 	font-family: Microsoft JhengHei;
 }
-th{
+.th1{
 	font-weight:bold;
 	font-size: 18px;
 }
@@ -220,37 +235,37 @@ th{
 	color: #00a67d;
 }
 .data{
-	position: relative;			/*給送出按鈕相對位置調整*/
 	margin-top: 60px;
-	float: left;
-	width: 1000px;
-	height: 415px;
+	padding: 20px;
+	width: 960px;
 	background: -webkit-linear-gradient(#00644b,#009872);
+	border-radius: 10px;
 }
 .indata{
 	text-align: center;
 	color: white;
-	font-family: Microsoft JhengHei;
 	font-size: 26px;
 	line-height: 40px;
-	margin: 40px 0px 20px 0px;
+	margin: 0px 0px 20px 0px;
 }
 .introduce{
 	padding: 5px;
 	float: left;
-	margin: 10px 0px 10px 16px;
+	margin: 10px 0px 10px 0px;
 	border-radius: 5px;
 }
 .label{
+	display: block;
 	font-family: Microsoft JhengHei;
-	margin: 20px 0px 0px 30px;
+	margin: 20px 0px 0px 480px;
 	color: white;
 }
 .textarea{
+	display: block;
 	padding-left: 10px;
 	height: 30px;
-	width: 493px;
-	margin: 8px 0px 8px 30px;
+	width: 450px;
+	margin: 8px 0px 8px 480px;
 	border-radius: 5px;
 }
 .button{
@@ -260,14 +275,12 @@ th{
 	height: 32px;
 	background: #00cc99;
 	border-radius: 5px;
-	margin: 10px 0px 0px 469px;
+	margin: 10px 0px 0px 455px;
 	font-family: Microsoft JhengHei;
 }
-.button:hover{				/*按鈕hover時往右下些許移動 看起來有按下去的效果*/
-	position: absolute;		/*設置絕對位置*/
+.button:hover{		
+	transition: all 0.4s;		
 	color: red;
-	right: 21px;			/*box內的位置調整*/
-	bottom: 26px;
 	background: white;
 }
 .footer{
@@ -282,10 +295,10 @@ th{
 	opacity:1.0;				/*可使物件半透明濾鏡  1.0為正常狀態 0.6時為透明40%*/
 }
 .footer img:hover{
+	transition: all 0.4s;
 	opacity:0.6;
 }
 .contact{
-	font-family: Microsoft JhengHei;
 	float: right;
 	width: 220px;
 	margin-right: 10px;
@@ -297,5 +310,6 @@ th{
 	color: red;
 }
 .contact a:hover{
+	transition: all 0.4s;
 	opacity:0.6;
 }
