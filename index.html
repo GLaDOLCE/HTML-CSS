@@ -21,45 +21,54 @@
     
 </head>
 <body>
+
 <div class="wrap">
     <div class="toplist">
         <ul>
-            <li><a href="http://www.hexschool.com/" target="_blank" class="fb" title="前往六角學院fb粉絲團"><img src="img/fblogo.png">粉絲團</a></li>
-            <li><a href="http://www.hexschool.com/" target="_blank" class="twitter" title="前往六角學院官方推特"><img src="img/twitterlogo.png">追隨我們</a></li>
+            <li><a href="http://www.hexschool.com/" target="_blank" class="fblink" title="前往六角學院fb粉絲團"><img src="img/fblogo.png">粉絲團</a></li>
+            <li><a href="http://www.hexschool.com/" target="_blank" class="twitterlink" title="前往六角學院官方推特"><img src="img/twitterlogo.png">追隨我們</a></li>
         </ul>
     </div>
     <div class="header">
         <h1><a href="http://www.hexschool.com/" target="_blank" title="前往六角學院官網">hexschool</a></h1>
         <div class="aboutus">
             <ul>
-                <li><a href="" class="aboutus1" title="前往首頁">首頁</a>
+                <li>
+                    <div class="home1">
+                        <a href="" class="aboutus1" title="前往首頁">首頁</a><div class="border"></div>
+                    </div>
                     <ul class="scroll1">
                         <li><a href="">前往首頁1</a></li>
                         <li><a href="">前往首頁2</a></li>
                         <li><a href="">前往首頁3</a></li>
                     </ul>
                 </li>
-                <li><a href="" class="aboutus2" title="前往產品介紹">產品介紹</a>
+                <li>
+                    <div class="home2">
+                        <a href="" class="aboutus2" title="前往產品介紹">產品介紹</a><div class="border"></div>
+                    </div>
                     <ul class="scroll2">
                         <li><a href="">產品介紹1</a></li>
                         <li><a href="">產品介紹2</a></li>
                         <li><a href="">產品介紹3</a></li>
                     </ul>
                 </li>
-                <li><a href="" class="aboutus3" title="聯絡我們">聯絡我們</a>
+                <li>
+                    <div class="home3">
+                        <a href="" class="aboutus3" title="聯絡我們">聯絡我們</a><div class="border"></div>
+                    </div>
                     <ul class="scroll3">
                         <li><a href="">聯絡我們1</a></li>
                         <li><a href="">聯絡我們2</a></li>
                         <li><a href="">聯絡我們3</a></li>
                     </ul>
                 </li>
-            </ul>
-        </div>
-        
-    </div>
-    <div class="banner">
-        <div class="inbanner">
-            <p>六角學院<br>讓您奠定良好的前端基礎</p>
+            </ul>   
+        </div>    
+        <div class="banner">
+            <div class="inbanner">
+                <p>六角學院<br>讓您奠定良好的前端基礎</p>
+            </div>
         </div>
     </div>
     <div class="introduction">
@@ -78,15 +87,14 @@
             </li>
         </ul>
     </div>
-    <div class="clear"></div>
     <div class="different">
         <div class="dtitle">線上及實體課程的差異</div>
         <table>
             <tr class="tr1">
-                <th><b>項目</b></th>
-                <th><b>Hex School 線上課程</b></th>
-                <th><b>一般線上課程</b></th>
-                <th><b>實體課程</b></th>
+                <th class="th1"><b>項目</b></th>
+                <th class="th1"><b>Hex School 線上課程</b></th>
+                <th class="th1"><b>一般線上課程</b></th>
+                <th class="th1"><b>實體課程</b></th>
             </tr>
             <tr>
                 <td>費用</td>
@@ -131,12 +139,12 @@
         <form action="final.html">
             <label for="introduce"></label>
             <textarea class="introduce" id="introduce" type="text" placeholder="個人簡介" name="intro" cols="55" rows="15"></textarea>
-            <label class="label" for="myname">姓名</label><br>
-            <input class="textarea" id="myname" type="text" placeholder="姓名" name="name"><br>
-            <label class="label" for="mytel">電話</label><br>
-            <input class="textarea" id="mytel" type="text" placeholder="電話號碼" name="tel"><br>
-            <label class="label" for="mymail">信箱</label><br>
-            <input class="textarea" id="mymail" type="text" placeholder="電子郵件信箱" name="mail"><br>
+            <label class="label" for="myname">姓名</label>
+            <input class="textarea" id="myname" type="text" placeholder="姓名" name="name">
+            <label class="label" for="mytel">電話</label>
+            <input class="textarea" id="mytel" type="text" placeholder="電話號碼" name="tel">
+            <label class="label" for="mymail">信箱</label>
+            <input class="textarea" id="mymail" type="text" placeholder="電子郵件信箱" name="mail">
             <input class="button" type="submit" value="送出">
         </form>
     </div>
